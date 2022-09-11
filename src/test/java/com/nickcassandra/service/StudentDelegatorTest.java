@@ -43,7 +43,7 @@ class StudentDelegatorTest {
         Student fetchStudent = studentDelegator.getStudent(1L).getBody();
         assertEquals(student.getEmail(), fetchStudent.getEmail());
     }
-    
+
     @Test
     public void updateStudent() {
         String newEmail = "cineran@usf.edu";

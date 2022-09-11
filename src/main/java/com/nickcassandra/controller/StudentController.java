@@ -30,12 +30,12 @@ public class StudentController {
     }
 
     @PostMapping(value = "/create", consumes = "application/json")
-    public ResponseEntity<Student> createStudent(Student student) {
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
         return studentDelegator.createStudent(student);
     }
 
     @PutMapping(value = "/update", consumes = "application/json")
-    public ResponseEntity<Student> updateStudent(Student student) {
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
         return studentDelegator.updateStudent(student);
     }
 

@@ -19,6 +19,7 @@ public class StudentDelegator implements Delegator {
     }
 
     public ResponseEntity<Student> createStudent(Student student) {
+        System.out.println("Student: " + student);
         return ResponseEntity.ok(studentRepo.save(student));
     }
 
